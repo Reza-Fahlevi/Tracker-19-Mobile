@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* CovidAppsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CovidAppsTests.m */; };
+		00E356F31AD99517003FC87E /* Tracker19Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* Tracker19Tests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1B6F45E2BF54FA18897687D6 /* libPods-CovidApps-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8AE4E520A737D07DDA642E7 /* libPods-CovidApps-tvOSTests.a */; };
+		1B6F45E2BF54FA18897687D6 /* libPods-Tracker19-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8AE4E520A737D07DDA642E7 /* libPods-Tracker19-tvOSTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* CovidAppsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CovidAppsTests.m */; };
-		46D18B617AC0A3FC5EFFFB00 /* libPods-CovidApps-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B70D9062EC45EF60922B3F92 /* libPods-CovidApps-tvOS.a */; };
-		7C2135A64635A4BC4A9C8DD6 /* libPods-CovidAppsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90BE534468E64F259BEEE9F4 /* libPods-CovidAppsTests.a */; };
-		85FFF606A453E126BAE7CF3B /* libPods-CovidApps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC061CC4F55D2AB58964395 /* libPods-CovidApps.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* Tracker19Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* Tracker19Tests.m */; };
+		46D18B617AC0A3FC5EFFFB00 /* libPods-Tracker19-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B70D9062EC45EF60922B3F92 /* libPods-Tracker19-tvOS.a */; };
+		7C2135A64635A4BC4A9C8DD6 /* libPods-Tracker19Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90BE534468E64F259BEEE9F4 /* libPods-Tracker19Tests.a */; };
+		85FFF606A453E126BAE7CF3B /* libPods-Tracker19.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC061CC4F55D2AB58964395 /* libPods-Tracker19.a */; };
 		E3831817242A67990034913D /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E34A45DA24263B5E00438F52 /* Poppins-Bold.ttf */; };
 		E3831818242A67990034913D /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E34A45C024263AD000438F52 /* Poppins-Light.ttf */; };
 		E3831819242A67990034913D /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E34A45B424263ACE00438F52 /* Poppins-Medium.ttf */; };
@@ -36,42 +36,42 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = CovidApps;
+			remoteInfo = Tracker19;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "CovidApps-tvOS";
+			remoteInfo = "Tracker19-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* CovidAppsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CovidAppsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* Tracker19Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tracker19Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* CovidAppsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CovidAppsTests.m; sourceTree = "<group>"; };
-		0BC061CC4F55D2AB58964395 /* libPods-CovidApps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CovidApps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C94D4D283C6288B1A7C9464 /* Pods-CovidApps-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidApps-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-CovidApps-tvOSTests/Pods-CovidApps-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* CovidApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CovidApps/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = CovidApps/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* Tracker19Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tracker19Tests.m; sourceTree = "<group>"; };
+		0BC061CC4F55D2AB58964395 /* libPods-Tracker19.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tracker19.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C94D4D283C6288B1A7C9464 /* Pods-Tracker19-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracker19-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-Tracker19-tvOSTests/Pods-Tracker19-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Tracker19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker19.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Tracker19/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Tracker19/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CovidApps/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CovidApps/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CovidApps/main.m; sourceTree = "<group>"; };
-		1FD828BA3C6D308862F6FF35 /* Pods-CovidApps-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidApps-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-CovidApps-tvOSTests/Pods-CovidApps-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* CovidApps-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CovidApps-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* CovidApps-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CovidApps-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		35E0216E27C1D7780519F982 /* Pods-CovidApps-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidApps-tvOS.release.xcconfig"; path = "Target Support Files/Pods-CovidApps-tvOS/Pods-CovidApps-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		4399DECF4E5FED2CBF7DC2B2 /* Pods-CovidApps-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidApps-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-CovidApps-tvOS/Pods-CovidApps-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		4761556F634FDF38979F998F /* Pods-CovidApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidApps.release.xcconfig"; path = "Target Support Files/Pods-CovidApps/Pods-CovidApps.release.xcconfig"; sourceTree = "<group>"; };
-		90BE534468E64F259BEEE9F4 /* libPods-CovidAppsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CovidAppsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3C57FA25B2020F0D96933D8 /* Pods-CovidApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidApps.debug.xcconfig"; path = "Target Support Files/Pods-CovidApps/Pods-CovidApps.debug.xcconfig"; sourceTree = "<group>"; };
-		B70D9062EC45EF60922B3F92 /* libPods-CovidApps-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CovidApps-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D70536FCFEBF980FC7B79724 /* Pods-CovidAppsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidAppsTests.release.xcconfig"; path = "Target Support Files/Pods-CovidAppsTests/Pods-CovidAppsTests.release.xcconfig"; sourceTree = "<group>"; };
-		D8AE4E520A737D07DDA642E7 /* libPods-CovidApps-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CovidApps-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Tracker19/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tracker19/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Tracker19/main.m; sourceTree = "<group>"; };
+		1FD828BA3C6D308862F6FF35 /* Pods-Tracker19-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracker19-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Tracker19-tvOSTests/Pods-Tracker19-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* Tracker19-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tracker19-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* Tracker19-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tracker19-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35E0216E27C1D7780519F982 /* Pods-Tracker19-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracker19-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Tracker19-tvOS/Pods-Tracker19-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		4399DECF4E5FED2CBF7DC2B2 /* Pods-Tracker19-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracker19-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-Tracker19-tvOS/Pods-Tracker19-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		4761556F634FDF38979F998F /* Pods-Tracker19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracker19.release.xcconfig"; path = "Target Support Files/Pods-Tracker19/Pods-Tracker19.release.xcconfig"; sourceTree = "<group>"; };
+		90BE534468E64F259BEEE9F4 /* libPods-Tracker19Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tracker19Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C57FA25B2020F0D96933D8 /* Pods-Tracker19.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracker19.debug.xcconfig"; path = "Target Support Files/Pods-Tracker19/Pods-Tracker19.debug.xcconfig"; sourceTree = "<group>"; };
+		B70D9062EC45EF60922B3F92 /* libPods-Tracker19-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tracker19-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D70536FCFEBF980FC7B79724 /* Pods-Tracker19Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracker19Tests.release.xcconfig"; path = "Target Support Files/Pods-Tracker19Tests/Pods-Tracker19Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D8AE4E520A737D07DDA642E7 /* libPods-Tracker19-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tracker19-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34A45AA24263ACD00438F52 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../android/app/src/main/assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		E34A45AB24263ACD00438F52 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Entypo.ttf; path = ../../android/app/src/main/assets/fonts/Entypo.ttf; sourceTree = "<group>"; };
 		E34A45AC24263ACD00438F52 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SimpleLineIcons.ttf; path = ../../android/app/src/main/assets/fonts/SimpleLineIcons.ttf; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		E34A45C024263AD000438F52 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../../android/app/src/main/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		E34A45C124263AD000438F52 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Fontisto.ttf; path = ../../android/app/src/main/assets/fonts/Fontisto.ttf; sourceTree = "<group>"; };
 		E34A45DA24263B5E00438F52 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../android/app/src/main/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		EC63A19FE8247DAC97013460 /* Pods-CovidAppsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovidAppsTests.debug.xcconfig"; path = "Target Support Files/Pods-CovidAppsTests/Pods-CovidAppsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC63A19FE8247DAC97013460 /* Pods-Tracker19Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracker19Tests.debug.xcconfig"; path = "Target Support Files/Pods-Tracker19Tests/Pods-Tracker19Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -106,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C2135A64635A4BC4A9C8DD6 /* libPods-CovidAppsTests.a in Frameworks */,
+				7C2135A64635A4BC4A9C8DD6 /* libPods-Tracker19Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85FFF606A453E126BAE7CF3B /* libPods-CovidApps.a in Frameworks */,
+				85FFF606A453E126BAE7CF3B /* libPods-Tracker19.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46D18B617AC0A3FC5EFFFB00 /* libPods-CovidApps-tvOS.a in Frameworks */,
+				46D18B617AC0A3FC5EFFFB00 /* libPods-Tracker19-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,20 +130,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B6F45E2BF54FA18897687D6 /* libPods-CovidApps-tvOSTests.a in Frameworks */,
+				1B6F45E2BF54FA18897687D6 /* libPods-Tracker19-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* CovidAppsTests */ = {
+		00E356EF1AD99517003FC87E /* Tracker19Tests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* CovidAppsTests.m */,
+				00E356F21AD99517003FC87E /* Tracker19Tests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = CovidAppsTests;
+			path = Tracker19Tests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -154,7 +154,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* CovidApps */ = {
+		13B07FAE1A68108700A75B9A /* Tracker19 */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -165,20 +165,20 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = CovidApps;
+			name = Tracker19;
 			sourceTree = "<group>";
 		};
 		1F986F34BA1F302375CC3BB3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B3C57FA25B2020F0D96933D8 /* Pods-CovidApps.debug.xcconfig */,
-				4761556F634FDF38979F998F /* Pods-CovidApps.release.xcconfig */,
-				4399DECF4E5FED2CBF7DC2B2 /* Pods-CovidApps-tvOS.debug.xcconfig */,
-				35E0216E27C1D7780519F982 /* Pods-CovidApps-tvOS.release.xcconfig */,
-				1FD828BA3C6D308862F6FF35 /* Pods-CovidApps-tvOSTests.debug.xcconfig */,
-				0C94D4D283C6288B1A7C9464 /* Pods-CovidApps-tvOSTests.release.xcconfig */,
-				EC63A19FE8247DAC97013460 /* Pods-CovidAppsTests.debug.xcconfig */,
-				D70536FCFEBF980FC7B79724 /* Pods-CovidAppsTests.release.xcconfig */,
+				B3C57FA25B2020F0D96933D8 /* Pods-Tracker19.debug.xcconfig */,
+				4761556F634FDF38979F998F /* Pods-Tracker19.release.xcconfig */,
+				4399DECF4E5FED2CBF7DC2B2 /* Pods-Tracker19-tvOS.debug.xcconfig */,
+				35E0216E27C1D7780519F982 /* Pods-Tracker19-tvOS.release.xcconfig */,
+				1FD828BA3C6D308862F6FF35 /* Pods-Tracker19-tvOSTests.debug.xcconfig */,
+				0C94D4D283C6288B1A7C9464 /* Pods-Tracker19-tvOSTests.release.xcconfig */,
+				EC63A19FE8247DAC97013460 /* Pods-Tracker19Tests.debug.xcconfig */,
+				D70536FCFEBF980FC7B79724 /* Pods-Tracker19Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -188,10 +188,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				0BC061CC4F55D2AB58964395 /* libPods-CovidApps.a */,
-				B70D9062EC45EF60922B3F92 /* libPods-CovidApps-tvOS.a */,
-				D8AE4E520A737D07DDA642E7 /* libPods-CovidApps-tvOSTests.a */,
-				90BE534468E64F259BEEE9F4 /* libPods-CovidAppsTests.a */,
+				0BC061CC4F55D2AB58964395 /* libPods-Tracker19.a */,
+				B70D9062EC45EF60922B3F92 /* libPods-Tracker19-tvOS.a */,
+				D8AE4E520A737D07DDA642E7 /* libPods-Tracker19-tvOSTests.a */,
+				90BE534468E64F259BEEE9F4 /* libPods-Tracker19Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,9 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				E30FD0A3242619E70036B9F4 /* fonts */,
-				13B07FAE1A68108700A75B9A /* CovidApps */,
+				13B07FAE1A68108700A75B9A /* Tracker19 */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* CovidAppsTests */,
+				00E356EF1AD99517003FC87E /* Tracker19Tests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				1F986F34BA1F302375CC3BB3 /* Pods */,
@@ -222,10 +222,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* CovidApps.app */,
-				00E356EE1AD99517003FC87E /* CovidAppsTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* CovidApps-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* CovidApps-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* Tracker19.app */,
+				00E356EE1AD99517003FC87E /* Tracker19Tests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* Tracker19-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* Tracker19-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,9 +264,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* CovidAppsTests */ = {
+		00E356ED1AD99517003FC87E /* Tracker19Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CovidAppsTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "Tracker19Tests" */;
 			buildPhases = (
 				58B3F8AAFD96949C21C73FAC /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -278,14 +278,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = CovidAppsTests;
-			productName = CovidAppsTests;
-			productReference = 00E356EE1AD99517003FC87E /* CovidAppsTests.xctest */;
+			name = Tracker19Tests;
+			productName = Tracker19Tests;
+			productReference = 00E356EE1AD99517003FC87E /* Tracker19Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* CovidApps */ = {
+		13B07F861A680F5B00A75B9A /* Tracker19 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "CovidApps" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Tracker19" */;
 			buildPhases = (
 				723F45631EFF9A95D9690E62 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -299,14 +299,14 @@
 			);
 			dependencies = (
 			);
-			name = CovidApps;
-			productName = CovidApps;
-			productReference = 13B07F961A680F5B00A75B9A /* CovidApps.app */;
+			name = Tracker19;
+			productName = Tracker19;
+			productReference = 13B07F961A680F5B00A75B9A /* Tracker19.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* CovidApps-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* Tracker19-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CovidApps-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Tracker19-tvOS" */;
 			buildPhases = (
 				B33B9387A4C967571576B50E /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -319,14 +319,14 @@
 			);
 			dependencies = (
 			);
-			name = "CovidApps-tvOS";
-			productName = "CovidApps-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* CovidApps-tvOS.app */;
+			name = "Tracker19-tvOS";
+			productName = "Tracker19-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* Tracker19-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* CovidApps-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* Tracker19-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CovidApps-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Tracker19-tvOSTests" */;
 			buildPhases = (
 				E2A703F00FCE960DD34AA6CD /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -338,9 +338,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "CovidApps-tvOSTests";
-			productName = "CovidApps-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* CovidApps-tvOSTests.xctest */;
+			name = "Tracker19-tvOSTests";
+			productName = "Tracker19-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* Tracker19-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -373,7 +373,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "CovidApps" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Tracker19" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -387,10 +387,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* CovidApps */,
-				00E356ED1AD99517003FC87E /* CovidAppsTests */,
-				2D02E47A1E0B4A5D006451C7 /* CovidApps-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* CovidApps-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* Tracker19 */,
+				00E356ED1AD99517003FC87E /* Tracker19Tests */,
+				2D02E47A1E0B4A5D006451C7 /* Tracker19-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* Tracker19-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -481,7 +481,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CovidAppsTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Tracker19Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -494,7 +494,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CovidApps/Pods-CovidApps-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Tracker19/Pods-Tracker19-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -533,7 +533,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CovidApps/Pods-CovidApps-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tracker19/Pods-Tracker19-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		723F45631EFF9A95D9690E62 /* [CP] Check Pods Manifest.lock */ = {
@@ -551,7 +551,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CovidApps-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Tracker19-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -573,7 +573,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CovidApps-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Tracker19-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -595,7 +595,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CovidApps-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Tracker19-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -647,7 +647,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* CovidAppsTests.m in Sources */,
+				00E356F31AD99517003FC87E /* Tracker19Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,7 +673,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* CovidAppsTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* Tracker19Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,12 +682,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* CovidApps */;
+			target = 13B07F861A680F5B00A75B9A /* Tracker19 */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* CovidApps-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* Tracker19-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -699,7 +699,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = CovidApps;
+			path = Tracker19;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -707,7 +707,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC63A19FE8247DAC97013460 /* Pods-CovidAppsTests.debug.xcconfig */;
+			baseConfigurationReference = EC63A19FE8247DAC97013460 /* Pods-Tracker19Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 9G8NKUX9DA;
@@ -715,7 +715,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = CovidAppsTests/Info.plist;
+				INFOPLIST_FILE = Tracker19Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -725,18 +725,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CovidApps.app/CovidApps";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tracker19.app/Tracker19";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D70536FCFEBF980FC7B79724 /* Pods-CovidAppsTests.release.xcconfig */;
+			baseConfigurationReference = D70536FCFEBF980FC7B79724 /* Pods-Tracker19Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 9G8NKUX9DA;
-				INFOPLIST_FILE = CovidAppsTests/Info.plist;
+				INFOPLIST_FILE = Tracker19Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -746,19 +746,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CovidApps.app/CovidApps";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tracker19.app/Tracker19";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3C57FA25B2020F0D96933D8 /* Pods-CovidApps.debug.xcconfig */;
+			baseConfigurationReference = B3C57FA25B2020F0D96933D8 /* Pods-Tracker19.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 9G8NKUX9DA;
-				INFOPLIST_FILE = CovidApps/Info.plist;
+				INFOPLIST_FILE = Tracker19/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -766,19 +766,19 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = CovidApps;
+				PRODUCT_NAME = Tracker19;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4761556F634FDF38979F998F /* Pods-CovidApps.release.xcconfig */;
+			baseConfigurationReference = 4761556F634FDF38979F998F /* Pods-Tracker19.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9G8NKUX9DA;
-				INFOPLIST_FILE = CovidApps/Info.plist;
+				INFOPLIST_FILE = Tracker19/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -786,14 +786,14 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = CovidApps;
+				PRODUCT_NAME = Tracker19;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4399DECF4E5FED2CBF7DC2B2 /* Pods-CovidApps-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 4399DECF4E5FED2CBF7DC2B2 /* Pods-Tracker19-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -805,14 +805,14 @@
 				DEVELOPMENT_TEAM = 9G8NKUX9DA;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "CovidApps-tvOS/Info.plist";
+				INFOPLIST_FILE = "Tracker19-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.CovidApps-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Tracker19-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -822,7 +822,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35E0216E27C1D7780519F982 /* Pods-CovidApps-tvOS.release.xcconfig */;
+			baseConfigurationReference = 35E0216E27C1D7780519F982 /* Pods-Tracker19-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -834,14 +834,14 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9G8NKUX9DA;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "CovidApps-tvOS/Info.plist";
+				INFOPLIST_FILE = "Tracker19-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.CovidApps-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Tracker19-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -851,7 +851,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FD828BA3C6D308862F6FF35 /* Pods-CovidApps-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 1FD828BA3C6D308862F6FF35 /* Pods-Tracker19-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -862,24 +862,24 @@
 				DEVELOPMENT_TEAM = 9G8NKUX9DA;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "CovidApps-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Tracker19-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.CovidApps-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Tracker19-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CovidApps-tvOS.app/CovidApps-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tracker19-tvOS.app/Tracker19-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C94D4D283C6288B1A7C9464 /* Pods-CovidApps-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 0C94D4D283C6288B1A7C9464 /* Pods-Tracker19-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -890,17 +890,17 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9G8NKUX9DA;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "CovidApps-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "Tracker19-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.CovidApps-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Tracker19-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CovidApps-tvOS.app/CovidApps-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tracker19-tvOS.app/Tracker19-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -1007,7 +1007,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CovidAppsTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "Tracker19Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1016,7 +1016,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "CovidApps" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Tracker19" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1025,7 +1025,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CovidApps-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Tracker19-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1034,7 +1034,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CovidApps-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Tracker19-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1043,7 +1043,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "CovidApps" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Tracker19" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
