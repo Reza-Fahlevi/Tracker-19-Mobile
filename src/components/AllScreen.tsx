@@ -321,7 +321,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
             ) : this.renderLoading()}
           </ScrollView>
           <SafeAreaView>
-            <TouchableOpacity style={styles.scrollToTop} onPress={() => this.scrollToTop()}>
+            <TouchableOpacity style={styles.scrollToTop} onPress={() => this.props.navigation.navigate('Webview', { headerText: 'Halaman Webview', uri: 'https://google.com' })}>
               <Feather name='chevrons-up' style={{ color: white, fontSize: 28 }} />
             </TouchableOpacity>
           </SafeAreaView>
