@@ -1,19 +1,20 @@
 import React, { Component } from 'react'
-import { View, Text, KeyboardAvoidingView, BackHandler, Platform, ProgressViewIOS, ProgressBarAndroid, Stylesheet } from 'react-native'
-import { connect } from 'react-redux'
+import { View, Text, KeyboardAvoidingView, BackHandler, ProgressBarAndroid, StyleSheet } from 'react-native'
 import { WebView } from 'react-native-webview'
 import { SafeAreaView } from 'react-navigation'
 import _ from 'lodash'
-import { basic, danger, success, warning, white } from '../Lib/Color'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
 
-class WebView extends Component {
+import Header from './Header'
 
-  // static navigationOptions = ({ navigaton, screenProps }) => {
-  //   return {
-  //     header: null
-  //   }
-  // }
+import { basic, danger, white, black } from '../Lib/Color'
+
+class WebviewScreen extends Component {
+
+  static navigationOptions = ({ navigaton, screenProps }) => {
+    return {
+      header: null
+    }
+  }
 
   constructor(props) {
     super(props);
@@ -83,11 +84,11 @@ class WebView extends Component {
 
   render() {
     const { navigation } = this.props
-    const { state: {params} } = navigation
+    const { state: { params } } = navigation
 
     return (
       <SafeAreaView style={styles.root} forceInset={{ bottom: 'never' }}>
-        {this.renderHeader()}
+        <Header headerText={params.headerText} navigation={this.props.navigation} />
         <KeyboardAvoidingView style={styles.root} behavior="padding" enabled>
           <View style={styles.root}>
             {_.isEmpty(params.uri ? this.renderError() : this.renderWebView(params.uri))}
@@ -127,4 +128,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default WebView
+export default WebviewScreen
