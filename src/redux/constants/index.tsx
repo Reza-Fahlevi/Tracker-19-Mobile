@@ -14,4 +14,4 @@ export const GET_COUNTRIES_STOP = 'GET_COUNTRIES_STOP'
 
 export const IS_CONNECTED = 'IS_CONNECTED'
 
-export const baseURL = 'https://coronavirus-19-api.herokuapp.com/'
+export const baseURL = 'https://coronavirus-19-api.herokuapp.com/' //buat ngambil data covid (?)
