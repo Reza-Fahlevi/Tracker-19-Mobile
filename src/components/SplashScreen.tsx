@@ -28,7 +28,7 @@ class SplashScreen extends React.Component<Props> {
         <SafeAreaView style={styles.container}>
           <View style={styles.iconContainer}>
             <Image resizeMode={'contain'} source={require('../assets/CoronaIcon.png')} style={styles.icon} />
-            <Text style={styles.appTitle}>Covid Apps</Text>
+            <Text style={styles.appTitle}>Tracker-19</Text>
           </View>
         </SafeAreaView>
       </>
