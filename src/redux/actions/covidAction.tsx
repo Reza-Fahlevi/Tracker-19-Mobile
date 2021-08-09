@@ -5,10 +5,11 @@ import {
   GET_ALL_CASES, GET_ALL_CASES_START, GET_ALL_CASES_STOP, 
   GET_ALL_COUNTRIES_START, GET_ALL_COUNTRIES, GET_ALL_COUNTRIES_STOP,
   GET_COUNTRIES_START, GET_COUNTRIES, GET_COUNTRIES_STOP
-} from '../constants'
+} from '../constants' //import variabel dari constant/index
 
 let api = API.create()
 
+//buat dapetin data dari api vv
 export const getAllCases = () => {
   return async (dispatch: any) => {
     try {
