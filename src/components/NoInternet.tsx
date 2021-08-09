@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { SafeAreaView, StyleSheet, Image, Text, TouchableOpacity } from 'react-native'
 
-import { blackSecondary, success, white } from '../Lib/Color'
+import { blackSecondary, primary, success, white } from '../Lib/Color'
 
 const NoInternet = (props) => {
   const { onPress } = props
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   buttonText: {
-    color: '#15A97B',
+    color: primary,
     fontFamily: 'Poppins-Light',
     fontSize: 16,
     marginTop: 24,
