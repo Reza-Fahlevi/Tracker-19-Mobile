@@ -3,10 +3,13 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation'
 
 import SplashScreen from '../components/SplashScreen'
 import AllScreen from '../components/AllScreen'
+import WebView from '../components/WebView'
+
 
 const RootNavigator = createSwitchNavigator({
+  Splash: SplashScreen ,
   App: AllScreen,
-  Splash: SplashScreen 
+  WebView: WebView
 }, {
   initialRouteName: 'Splash'
 })
