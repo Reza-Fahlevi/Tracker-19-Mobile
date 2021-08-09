@@ -1,6 +1,6 @@
 'use strict'
 
-import API from '../constants/listAPI'
+import API from '../constants/listAPI' //buat import api (?)
 import {
   GET_ALL_CASES, GET_ALL_CASES_START, GET_ALL_CASES_STOP, 
   GET_ALL_COUNTRIES_START, GET_ALL_COUNTRIES, GET_ALL_COUNTRIES_STOP,
