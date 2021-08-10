@@ -10,6 +10,7 @@ import {
 let api = API.create()
 
 //buat dapetin data dari api vv
+//prosedur 3 dibawah ini buat negara kah ? kinda curious dimana yang indo :''
 export const getAllCases = () => {
   return async (dispatch: any) => {
     try {
