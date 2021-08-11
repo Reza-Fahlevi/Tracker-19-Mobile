@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet, Image, Text, TouchableOpacity } from 'react-n
 
 import { blackSecondary, success, white } from '../Lib/Color'
 
+//safe area view itu kea page ya ?
 const NoInternet = (props) => {
   const { onPress } = props
 
@@ -19,6 +20,7 @@ const NoInternet = (props) => {
   
 }
 
+//define style buat no internet page (?)
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
