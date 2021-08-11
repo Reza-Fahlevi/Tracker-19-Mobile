@@ -36,6 +36,7 @@ class SplashScreen extends React.Component<Props> {
   }
 }
 
+//define style yg kemudian dipanggil saat render
 const styles = StyleSheet.create({
   container: {
     backgroundColor: white,

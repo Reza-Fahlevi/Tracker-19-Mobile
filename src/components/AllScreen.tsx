@@ -347,6 +347,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
   }
 }
 
+//ini buat style halaman yang ditampilin (?)
 const styles = StyleSheet.create({
   container: {
     backgroundColor: white,
