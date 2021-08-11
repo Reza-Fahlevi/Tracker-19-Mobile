@@ -2,7 +2,7 @@ import * as React from 'react'
 import { SafeAreaView, Text, ScrollView, View, StyleSheet, RefreshControl, Platform, TextInput, TouchableOpacity, FlatList } from 'react-native'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Spinner, Icon, Item } from 'native-base'
+import { Fab, Spinner, Icon, Item, Button } from 'native-base'
 import Feather from 'react-native-vector-icons/Feather'
 import { Card } from '@ui-kitten/components'
 import _ from 'lodash'
@@ -28,7 +28,8 @@ interface AllScreenState {
   pinnedCountry?: string,
   filteredListItem?: [],
   searchText?: string,
-  alert: boolean
+  alert: boolean,
+  active: boolean
 }
 
 let sort = 'desc'
@@ -44,6 +45,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
       filteredListItem: state.filteredListItem,
       searchText: state.searchText,
       alert: state.alert,
+      active: state.active
     }
 
     this.myRef = React.createRef()
@@ -289,6 +291,23 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
     )
   }
 
+  renderFloatingButton(): Object {
+    return (
+      <Fab
+        active={this.state.active}
+        direction="up"
+        containerStyle={{}}
+        style={{ backgroundColor: black }}
+        position="bottomRight"
+        onPress={() => this.setState({ active: !this.state.active })}>
+        <Icon type='AntDesign' name={'flag'} style={{ fontSize: 24 }} />
+        <TouchableOpacity style={styles.indonesiaFlag} onPress={() => this.props.navigation.navigate('Webview', { headerText: 'Halaman Webview', uri: 'https://tracker-19.vercel.app/indonesia?header=0' })}>
+          <Feather name='chevrons-up' style={{ color: white, fontSize: 28 }} />
+        </TouchableOpacity>
+      </Fab>
+    )
+  }
+
   scrollToTop(): void {
     this.myRef.current.scrollTo({ x: 0, y: 0, animated: true })
   }
@@ -411,6 +430,16 @@ const styles = StyleSheet.create({
     borderRadius: 32,
     position: 'absolute',
     right: 16,
+  },
+  indonesiaFlag: {
+    backgroundColor: black,
+    padding: 8,
+    borderRadius: 32
+  },
+  checkupPage: {
+    backgroundColor: black,
+    padding: 8,
+    borderRadius: 32
   }
 })
 
