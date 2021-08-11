@@ -17,6 +17,7 @@ import NoInternet from './NoInternet'
 interface AllScreenProps {
   covid?: any,
 
+  navigation: any,
   getAllCases: any,
   getAllCountriesCases: any,
   getCountriesCases: any
@@ -321,7 +322,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
             ) : this.renderLoading()}
           </ScrollView>
           <SafeAreaView>
-            <TouchableOpacity style={styles.scrollToTop} onPress={() => this.props.navigation.navigate('Webview', { headerText: 'Halaman Webview', uri: 'https://google.com' })}>
+            <TouchableOpacity style={styles.scrollToTop} onPress={() => this.props.navigation.navigate('Webview', { headerText: 'Halaman Webview', uri: 'https://tracker-19.vercel.app/indonesia?header=0' })}>
               <Feather name='chevrons-up' style={{ color: white, fontSize: 28 }} />
             </TouchableOpacity>
           </SafeAreaView>
