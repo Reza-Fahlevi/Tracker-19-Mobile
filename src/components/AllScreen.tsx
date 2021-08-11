@@ -2,7 +2,7 @@ import * as React from 'react'
 import { SafeAreaView, Text, ScrollView, View, StyleSheet, RefreshControl, Platform, TextInput, TouchableOpacity, FlatList } from 'react-native'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Spinner, Icon, Item } from 'native-base'
+import { Fab, Spinner, Icon, Item } from 'native-base'
 import Feather from 'react-native-vector-icons/Feather'
 import { Card } from '@ui-kitten/components'
 import _ from 'lodash'
@@ -10,7 +10,7 @@ import DefaultPreference from 'react-native-default-preference'
 
 import { getAllCases, getAllCountriesCases, getCountriesCases } from '../redux/actions/covidAction'
 import { setConnection } from '../redux/actions/informationAction'
-import { danger, warning, basic, success, black, blackSecondary, disabled, white, } from '../Lib/Color'
+import { danger, warning, basic, success, black, blackSecondary, disabled, white, primary, } from '../Lib/Color'
 import { dynamicSort } from '../Lib/Lib';
 import NoInternet from './NoInternet'
 
@@ -28,7 +28,8 @@ interface AllScreenState {
   pinnedCountry?: string,
   filteredListItem?: [],
   searchText?: string,
-  alert: boolean
+  alert: boolean,
+  active: boolean
 }
 
 let sort = 'desc'
@@ -44,6 +45,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
       filteredListItem: state.filteredListItem,
       searchText: state.searchText,
       alert: state.alert,
+      active: state.active,
     }
 
     this.myRef = React.createRef()
@@ -57,7 +59,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
     getAllCases()
     getAllCountriesCases()
 
-    this.setState({ refreshing: false })
+    this.setState({ refreshing: false, active: false })
   }
 
   getPreference(): void {
@@ -289,6 +291,27 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
     )
   }
 
+  renderFloatingButton(): Object {
+    console.log(this.state.active, 'active');
+    
+    return (
+      <Fab
+        active={this.state.active}
+        direction="up"
+        style={{ backgroundColor: black }}
+        position="bottomRight"
+        onPress={() => this.setState({ active: !this.state.active })}>
+        <Icon type='AntDesign' name={'ellipsis1'} style={{ fontSize: 24 }} />
+        <TouchableOpacity style={styles.indonesiaFlag} onPress={() => this.props.navigation.navigate('Webview', { headerText: 'Indonesia', uri: 'https://tracker-19.vercel.app/indonesia?header=0' })}>
+          <Icon type='AntDesign' name={'flag'} style={{ fontSize: 16 }} />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.checkupPage} onPress={() => this.props.navigation.navigate('Webview', { headerText: 'Checkup', uri: 'https://tracker-19.vercel.app/checkup?header=0' })}>
+          <Icon type='AntDesign' name={'form'} style={{ fontSize: 16 }} />
+        </TouchableOpacity>
+      </Fab>
+    )
+  }
+
   scrollToTop(): void {
     this.myRef.current.scrollTo({ x: 0, y: 0, animated: true })
   }
@@ -321,11 +344,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
               this.renderListCountry(filterListItem)
             ) : this.renderLoading()}
           </ScrollView>
-          <SafeAreaView>
-            <TouchableOpacity style={styles.scrollToTop} onPress={() => this.props.navigation.navigate('Webview', { headerText: 'Halaman Webview', uri: 'https://tracker-19.vercel.app/indonesia?header=0' })}>
-              <Feather name='chevrons-up' style={{ color: white, fontSize: 28 }} />
-            </TouchableOpacity>
-          </SafeAreaView>
+          {this.renderFloatingButton()}
         </>
       )
     }
@@ -410,6 +429,16 @@ const styles = StyleSheet.create({
     borderRadius: 32,
     position: 'absolute',
     right: 16,
+  },
+  indonesiaFlag: {
+    backgroundColor: primary,
+    padding: 8,
+    borderRadius: 32
+  },
+  checkupPage: {
+    backgroundColor: black,
+    padding: 8,
+    borderRadius: 32
   }
 })
 
