@@ -25,6 +25,7 @@ class WebviewScreen extends Component {
     };
   }
 
+  //kalo misal terjadi kesalahan saat ngerender halaman
   renderError = () => (
     <View style={styles.container}>
       <Image source={require('../assets/networkError.png')} />
@@ -32,12 +33,14 @@ class WebviewScreen extends Component {
     </View>
   )
 
+  //animasi loading
   renderSpinner = () => (
     <View style={styles.spinnerContainer}>
       <ActivityIndicator color={primary} size="large" />
     </View>
   )
 
+  //buat ngerender webview nya
   renderWebView = (uri) => (
     <View style={{ flex: 1 }}>
       <WebView
@@ -71,6 +74,7 @@ render() {
 }
 }
 
+//styiling
 const styles = StyleSheet.create({
   root: {
     backgroundColor: white,

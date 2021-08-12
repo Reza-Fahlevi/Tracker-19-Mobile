@@ -13,6 +13,7 @@ interface Props {
 }
 
 const timeout = 2000
+//based on milisecond
 
 class SplashScreen extends React.Component<Props> {
 
@@ -21,6 +22,7 @@ class SplashScreen extends React.Component<Props> {
       this.props.navigation.navigate('App')
     }, timeout)
   }
+  //setting the timer before navigate to AllScreen
 
   render() {
     return (
