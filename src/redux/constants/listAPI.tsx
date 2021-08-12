@@ -9,14 +9,17 @@ export const create = () => {
     timeout: 30000
   })
 
+  //ini buat get global ?
   const getAllCases = () => {
     return API.get('all')
   }
 
+  //ini buat get semua negara
   const getAllCountriesCases = () => {
     return API.get('countries')
   }
 
+  //ini buat get negara tertentu
   const getCountriesCases = (country: string) => {
     return API.get(`countries/${country}`)
   }
