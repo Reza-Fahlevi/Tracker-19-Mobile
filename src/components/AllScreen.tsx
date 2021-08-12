@@ -118,7 +118,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
   }
 
   renderItemGlobal(item: number, header: string): Object {
-    let statusHeader = header == 'Cases' ? black : header == 'Deaths' ? danger : success
+    let statusHeader = header == 'Positif' ? black : header == 'Meninggal' ? danger : success
 
     return (
       <Card style={{ marginRight: 8, width: 200 }}>
@@ -126,7 +126,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
         <View style={[styles.statusHeader, { backgroundColor: statusHeader }]} />
 
         {/* Header */}
-        <Text style={[styles.textDetail, { marginBottom: -4 }]}>Global</Text>
+        <Text style={[styles.textDetail, { marginBottom: -4 }]}>Kasus</Text>
         <Text style={styles.textTitle}>{header}</Text>
         {/* Divider */}
         <View style={styles.divider} />
@@ -159,17 +159,17 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
 
         {/* Content */}
         <View style={[styles.column, { marginVertical: 8 }]}>
-          <Text style={styles.textDetail}>{`Today Cases: ${this.formatNumber(item.todayCases || 0)}`}</Text>
-          <Text style={styles.textDetail}>{`Today Deaths: ${this.formatNumber(item.todayDeaths || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Kasus hari ini: ${this.formatNumber(item.todayCases || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Kematian hari ini: ${this.formatNumber(item.todayDeaths || 0)}`}</Text>
         </View>
         <View style={[styles.column, { marginVertical: 8 }]}>
-          <Text style={styles.textDetail}>{`Total Cases: ${this.formatNumber(item.cases || 0)}`}</Text>
-          <Text style={styles.textDetail}>{`Total Deaths: ${this.formatNumber(item.deaths || 0)}`}</Text>
-          <Text style={styles.textDetail}>{`Positive Cases: ${this.formatNumber(item.active || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Total kasus: ${this.formatNumber(item.cases || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Total kematian: ${this.formatNumber(item.deaths || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Total positif: ${this.formatNumber(item.active || 0)}`}</Text>
         </View>
         <View style={[styles.column, { marginVertical: 8 }]}>
-          <Text style={styles.textDetail}>{`Recovered: ${this.formatNumber(item.recovered || 0)}`}</Text>
-          <Text style={styles.textDetail}>{`Critical Condition: ${this.formatNumber(item.critical || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Angka sembuh: ${this.formatNumber(item.recovered || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Kondisi kritis: ${this.formatNumber(item.critical || 0)}`}</Text>
         </View>
       </Card>
     )
@@ -203,17 +203,17 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
 
         {/* Content */}
         <View style={[styles.column, { marginVertical: 8 }]}>
-          <Text style={styles.textDetail}>{`Today Cases: ${this.formatNumber(item.todayCases || 0)}`}</Text>
-          <Text style={styles.textDetail}>{`Today Deaths: ${this.formatNumber(item.todayDeaths || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Kasus hari ini: ${this.formatNumber(item.todayCases || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Kematian hari ini: ${this.formatNumber(item.todayDeaths || 0)}`}</Text>
         </View>
         <View style={[styles.column, { marginVertical: 8 }]}>
-          <Text style={styles.textDetail}>{`Total Cases: ${this.formatNumber(item.cases || 0)}`}</Text>
-          <Text style={styles.textDetail}>{`Total Deaths: ${this.formatNumber(item.deaths || 0)}`}</Text>
-          <Text style={styles.textDetail}>{`Positive Cases: ${this.formatNumber(item.active || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Total kasus: ${this.formatNumber(item.cases || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Total kematian: ${this.formatNumber(item.deaths || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Total positif: ${this.formatNumber(item.active || 0)}`}</Text>
         </View>
         <View style={[styles.column, { marginVertical: 8 }]}>
-          <Text style={styles.textDetail}>{`Recovered: ${this.formatNumber(item.recovered || 0)}`}</Text>
-          <Text style={styles.textDetail}>{`Critical Condition: ${this.formatNumber(item.critical || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Angka sembuh: ${this.formatNumber(item.recovered || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Kondisi kritis: ${this.formatNumber(item.critical || 0)}`}</Text>
         </View>
       </Card>
     )
@@ -225,7 +225,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
         <Feather name='search' size={20} color={'#bdbdbd'} />
         <TextInput
           style={styles.textInput}
-          placeholder={'Search Country'}
+          placeholder={'Cari negara . . .'}
           placeholderTextColor={'#bdbdbd'}
           value={searchText}
           onChangeText={(text) => this.onSearchTextChange(text)} />
@@ -245,9 +245,9 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
           contentContainerStyle={{ flexDirection: 'row', paddingHorizontal: 16 }}
           horizontal
           showsHorizontalScrollIndicator={false}>
-          {this.renderItemGlobal(listAllCases.cases, 'Cases')}
-          {this.renderItemGlobal(listAllCases.deaths, 'Deaths')}
-          {this.renderItemGlobal(listAllCases.recovered, 'Recovered')}
+          {this.renderItemGlobal(listAllCases.cases, 'Positif')}
+          {this.renderItemGlobal(listAllCases.deaths, 'Meninggal')}
+          {this.renderItemGlobal(listAllCases.recovered, 'Sembuh')}
         </ScrollView>
       </>
     )
@@ -257,7 +257,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
     return (
       <>
         <Text style={[styles.textHero, { marginTop: 8 }]}>
-          Pinned Country
+          Negara yang di pin
         </Text>
         {this.renderItemPinned(listCountriesCases)}
       </>
@@ -270,7 +270,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
     return (
       <>
         <Text style={[styles.textHero, { marginTop: 8 }]}>
-          All Country
+          Semua negara
         </Text>
         <FlatList
           initialNumToRender={5}
@@ -334,9 +334,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
           <ScrollView
             ref={this.myRef}
             refreshControl={<RefreshControl onRefresh={() => this.onRefresh()} refreshing={refreshing} />}>
-            <Text style={styles.textHero}>
-              Global Coronavirus Pandemic Cases
-            </Text>
+            <Text style={styles.textHero}>Perkembangan virus COVID-19 tingkat global</Text>
             {this.renderListGlobal(listAllCases)}
             {!loadingCountriesCases && listCountriesCases && pinnedCountry !== '' ? (
               this.renderListPinned(listCountriesCases)
@@ -409,6 +407,12 @@ const styles = StyleSheet.create({
   },
   textHero: {
     color: black,
+    fontFamily: 'Poppins-Bold',
+    fontSize: 20,
+    padding: 16,
+  },
+  textHeroOrange: {
+    color: primary,
     fontFamily: 'Poppins-Bold',
     fontSize: 20,
     padding: 16,
