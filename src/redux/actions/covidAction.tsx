@@ -11,6 +11,7 @@ let api = API.create()
 
 //buat dapetin data dari api vv
 //prosedur 3 dibawah ini buat negara kah ? kinda curious dimana yang indo :''
+//ini buat yg global / keseluruhan
 export const getAllCases = () => {
   return async (dispatch: any) => {
     try {
@@ -26,6 +27,7 @@ export const getAllCases = () => {
   }
 }
 
+//ini buat yg setiap negara
 export const getAllCountriesCases = () => {
   return async (dispatch: any) => {
     try {
@@ -42,6 +44,7 @@ export const getAllCountriesCases = () => {
   }
 }
 
+//ini buat negara yang dicari
 export const getCountriesCases = (country: string) => {
   return async (dispatch: any) => {
     try {

@@ -32,6 +32,7 @@ interface AllScreenState {
 
 let sort = 'desc'
 
+//ini isinya define / render halaman yg dipunya tracker 19
 class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
 
   private myRef: any
