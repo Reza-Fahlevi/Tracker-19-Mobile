@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { SafeAreaView, StyleSheet, Image, Text, TouchableOpacity } from 'react-native'
 
-import { blackSecondary, success, white } from '../Lib/Color'
+import { blackSecondary, primary, success, white } from '../Lib/Color'
 
 //safe area view itu kea page ya ?
 const NoInternet = (props) => {
@@ -12,8 +12,10 @@ const NoInternet = (props) => {
       <Image source={require('../assets/noInternetConnection.png')} />
       <Text style={styles.headerText}>Are you Lost Connection ?</Text>
       <Text style={styles.descriptionText}>Looks like we couldn’t find what you’re looking for please check your connection, and then try again</Text>
+      <Text style={styles.headerText}>Hilang Koneksi?</Text>
+      <Text style={styles.descriptionText}>Sepertinya kami tidak bisa memenuhi permintaan anda, mohon untuk memeriksa koneksi anda</Text>
       <TouchableOpacity onPress={onPress}>
-        <Text style={styles.buttonText}>Try Again</Text>
+        <Text style={styles.buttonText}>Coba lagi</Text>
       </TouchableOpacity>
     </SafeAreaView>
   )
@@ -43,7 +45,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   buttonText: {
-    color: '#15A97B',
+    color: primary,
     fontFamily: 'Poppins-Light',
     fontSize: 16,
     marginTop: 24,

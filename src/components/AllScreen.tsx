@@ -2,7 +2,7 @@ import * as React from 'react'
 import { SafeAreaView, Text, ScrollView, View, StyleSheet, RefreshControl, Platform, TextInput, TouchableOpacity, FlatList } from 'react-native'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Spinner, Icon, Item } from 'native-base'
+import { Fab, Spinner, Icon, Item } from 'native-base'
 import Feather from 'react-native-vector-icons/Feather'
 import { Card } from '@ui-kitten/components'
 import _ from 'lodash'
@@ -10,26 +10,30 @@ import DefaultPreference from 'react-native-default-preference'
 
 import { getAllCases, getAllCountriesCases, getCountriesCases } from '../redux/actions/covidAction'
 import { setConnection } from '../redux/actions/informationAction'
-import { danger, warning, basic, success, black, blackSecondary, disabled, white, } from '../Lib/Color'
+import { danger, warning, basic, success, black, blackSecondary, disabled, white, primary, } from '../Lib/Color'
 import { dynamicSort } from '../Lib/Lib';
 import NoInternet from './NoInternet'
 
+//typing
 interface AllScreenProps {
   covid?: any,
-
+  navigation: any,
   getAllCases: any,
   getAllCountriesCases: any,
   getCountriesCases: any
 }
 
+//sama, buat typing
 interface AllScreenState {
   refreshing: boolean,
   pinnedCountry?: string,
   filteredListItem?: [],
   searchText?: string,
-  alert: boolean
+  alert: boolean,
+  active: boolean
 }
 
+//pengurutan default descending
 let sort = 'desc'
 
 //ini isinya define / render halaman yg dipunya tracker 19
@@ -44,11 +48,13 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
       filteredListItem: state.filteredListItem,
       searchText: state.searchText,
       alert: state.alert,
+      active: state.active
     }
 
     this.myRef = React.createRef()
   }
 
+  //fetching pertama kali saat masuk ke screen
   componentDidMount(): void {
     const { getAllCases, getAllCountriesCases, setConnection }: any = this.props
 
@@ -57,9 +63,10 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
     getAllCases()
     getAllCountriesCases()
 
-    this.setState({ refreshing: false })
+    this.setState({ refreshing: false, active: false })
   }
 
+  //buat ngambil data yang di pin, ada atau engga
   getPreference(): void {
     DefaultPreference.get('pinned').then((res) => {
       this.setState({ pinnedCountry: res })
@@ -68,12 +75,14 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
     })
   }
 
+  //pengecekan state dan prop 
   componentDidUpdate(prevProps: any, prevState: any): void {
     if (this.state.pinnedCountry !== prevState.pinnedCountry) {
       if (!_.isEmpty(this.state.pinnedCountry)) this.props.getCountriesCases(this.state.pinnedCountry)
     }
   }
 
+  //melakukan pengambilan data saat dilakukan refresh
   onRefresh(): void {
     const { getAllCases, getAllCountriesCases, setConnection }: any = this.props
 
@@ -85,10 +94,12 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
     this.setState({ refreshing: false })
   }
 
+  //formatting angka
   formatNumber(num: number): String {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
   }
 
+  //buat menyimpan data pinned, set mengubah, get mengambil
   setDefaultPreference(dataPreference: string): void {
     DefaultPreference.set('pinned', dataPreference).then((res) => {
       DefaultPreference.get('pinned').then((res) => {
@@ -101,6 +112,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
     })
   }
 
+  //untuk fungsi pencarian negara, dipanggil saat ada perubahan text di searchbar
   onSearchTextChange = (searchText: string) => {
     const { listAllCountriesCases } = this.props.covid
 
@@ -115,8 +127,9 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
     this.setState({ searchText, filteredListItem: filtered })
   }
 
+  //ngerender negara yang card global
   renderItemGlobal(item: number, header: string): Object {
-    let statusHeader = header == 'Cases' ? black : header == 'Deaths' ? danger : success
+    let statusHeader = header == 'Positif' ? black : header == 'Meninggal' ? danger : success
 
     return (
       <Card style={{ marginRight: 8, width: 200 }}>
@@ -124,7 +137,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
         <View style={[styles.statusHeader, { backgroundColor: statusHeader }]} />
 
         {/* Header */}
-        <Text style={[styles.textDetail, { marginBottom: -4 }]}>Global</Text>
+        <Text style={[styles.textDetail, { marginBottom: -4 }]}>Kasus</Text>
         <Text style={styles.textTitle}>{header}</Text>
         {/* Divider */}
         <View style={styles.divider} />
@@ -135,8 +148,9 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
     )
   }
 
+  //ngerender card pinned
   renderItemPinned(item: any): Object {
-    let statusHeader = item.cases >= 1000 ? danger : item.cases >= 500 ? warning : item.cases <= 100 ? basic : success
+    let statusHeader = item.cases >= 5000000 ? danger : item.cases >= 1000000 ? warning : item.cases <= 500000 ? basic : success
 
     return (
       <Card style={{ marginVertical: 8, marginHorizontal: 16 }}>
@@ -157,24 +171,25 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
 
         {/* Content */}
         <View style={[styles.column, { marginVertical: 8 }]}>
-          <Text style={styles.textDetail}>{`Today Cases: ${this.formatNumber(item.todayCases || 0)}`}</Text>
-          <Text style={styles.textDetail}>{`Today Deaths: ${this.formatNumber(item.todayDeaths || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Kasus hari ini: ${this.formatNumber(item.todayCases || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Kematian hari ini: ${this.formatNumber(item.todayDeaths || 0)}`}</Text>
         </View>
         <View style={[styles.column, { marginVertical: 8 }]}>
-          <Text style={styles.textDetail}>{`Total Cases: ${this.formatNumber(item.cases || 0)}`}</Text>
-          <Text style={styles.textDetail}>{`Total Deaths: ${this.formatNumber(item.deaths || 0)}`}</Text>
-          <Text style={styles.textDetail}>{`Positive Cases: ${this.formatNumber(item.active || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Total kasus: ${this.formatNumber(item.cases || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Total kematian: ${this.formatNumber(item.deaths || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Total positif: ${this.formatNumber(item.active || 0)}`}</Text>
         </View>
         <View style={[styles.column, { marginVertical: 8 }]}>
-          <Text style={styles.textDetail}>{`Recovered: ${this.formatNumber(item.recovered || 0)}`}</Text>
-          <Text style={styles.textDetail}>{`Critical Condition: ${this.formatNumber(item.critical || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Angka sembuh: ${this.formatNumber(item.recovered || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Kondisi kritis: ${this.formatNumber(item.critical || 0)}`}</Text>
         </View>
       </Card>
     )
   }
 
+  //ngerender card tiap negara
   renderItem(item: any, index: number): any {
-    let statusHeader = item.cases >= 1000 ? danger : item.cases >= 500 ? warning : item.cases <= 100 ? basic : success
+    let statusHeader = item.cases >= 5000000 ? danger : item.cases >= 1000000 ? warning : item.cases <= 500000 ? basic : success
 
     const pinned = this.state.pinnedCountry == item.country ? 'pushpin' : 'pushpino'
     const setPreference = !_.isEmpty(this.state.pinnedCountry) ? '' : item.country
@@ -201,29 +216,30 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
 
         {/* Content */}
         <View style={[styles.column, { marginVertical: 8 }]}>
-          <Text style={styles.textDetail}>{`Today Cases: ${this.formatNumber(item.todayCases || 0)}`}</Text>
-          <Text style={styles.textDetail}>{`Today Deaths: ${this.formatNumber(item.todayDeaths || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Kasus hari ini: ${this.formatNumber(item.todayCases || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Kematian hari ini: ${this.formatNumber(item.todayDeaths || 0)}`}</Text>
         </View>
         <View style={[styles.column, { marginVertical: 8 }]}>
-          <Text style={styles.textDetail}>{`Total Cases: ${this.formatNumber(item.cases || 0)}`}</Text>
-          <Text style={styles.textDetail}>{`Total Deaths: ${this.formatNumber(item.deaths || 0)}`}</Text>
-          <Text style={styles.textDetail}>{`Positive Cases: ${this.formatNumber(item.active || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Total kasus: ${this.formatNumber(item.cases || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Total kematian: ${this.formatNumber(item.deaths || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Total positif: ${this.formatNumber(item.active || 0)}`}</Text>
         </View>
         <View style={[styles.column, { marginVertical: 8 }]}>
-          <Text style={styles.textDetail}>{`Recovered: ${this.formatNumber(item.recovered || 0)}`}</Text>
-          <Text style={styles.textDetail}>{`Critical Condition: ${this.formatNumber(item.critical || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Angka sembuh: ${this.formatNumber(item.recovered || 0)}`}</Text>
+          <Text style={styles.textDetail}>{`Kondisi kritis: ${this.formatNumber(item.critical || 0)}`}</Text>
         </View>
       </Card>
     )
   }
 
+  //ngerender searchbar
   renderSearch(searchText: string): Object {
     return (
       <Item style={styles.searchContainer}>
         <Feather name='search' size={20} color={'#bdbdbd'} />
         <TextInput
           style={styles.textInput}
-          placeholder={'Search Country'}
+          placeholder={'Cari negara . . .'}
           placeholderTextColor={'#bdbdbd'}
           value={searchText}
           onChangeText={(text) => this.onSearchTextChange(text)} />
@@ -236,6 +252,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
     )
   }
 
+  //ngerender data positip, sembuh, meninggal range global
   renderListGlobal(listAllCases: any): Object {
     return (
       <>
@@ -243,32 +260,35 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
           contentContainerStyle={{ flexDirection: 'row', paddingHorizontal: 16 }}
           horizontal
           showsHorizontalScrollIndicator={false}>
-          {this.renderItemGlobal(listAllCases.cases, 'Cases')}
-          {this.renderItemGlobal(listAllCases.deaths, 'Deaths')}
-          {this.renderItemGlobal(listAllCases.recovered, 'Recovered')}
+          {this.renderItemGlobal(listAllCases.cases, 'Positif')}
+          {this.renderItemGlobal(listAllCases.deaths, 'Meninggal')}
+          {this.renderItemGlobal(listAllCases.recovered, 'Sembuh')}
         </ScrollView>
       </>
     )
   }
 
+  //ngerender bagian negara yang di pin 
   renderListPinned(listCountriesCases: any): Object {
     return (
       <>
         <Text style={[styles.textHero, { marginTop: 8 }]}>
-          Pinned Country
+          Negara yang di pin
         </Text>
         {this.renderItemPinned(listCountriesCases)}
       </>
     )
   }
 
+  //render negara
   renderItems = ({ item, index }) => this.renderItem(item, index)
 
+  //render list negara
   renderListCountry(filterListItem: []): Object {
     return (
       <>
         <Text style={[styles.textHero, { marginTop: 8 }]}>
-          All Country
+          Semua negara
         </Text>
         <FlatList
           initialNumToRender={5}
@@ -281,6 +301,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
     )
   }
 
+  //ngerender animasi loading
   renderLoading(): Object {
     return (
       <View style={styles.spinner}>
@@ -289,10 +310,35 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
     )
   }
 
+  //ngerender tombol yg ngambang ituloh, sama aksi kalo di pencet
+  renderFloatingButton(): Object {
+    return (
+      <Fab
+        active={this.state.active}
+        direction="up"
+        style={{ backgroundColor: black }}
+        position="bottomRight"
+        onPress={() => this.setState({ active: !this.state.active })}>
+        <Icon type='AntDesign' name={'ellipsis1'} style={{ fontSize: 24 }} />
+        <TouchableOpacity style={styles.indonesiaFlag} onPress={() => this.props.navigation.navigate('Webview', { headerText: 'Indonesia', uri: 'https://tracker-19.vercel.app/indonesia?header=0' })}>
+          <Icon type='AntDesign' name={'flag'} style={{ fontSize: 16 }} />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.checkupPage} onPress={() => this.props.navigation.navigate('Webview', { headerText: 'Checkup', uri: 'https://tracker-19.vercel.app/checkup?header=0' })}>
+          <Icon type='AntDesign' name={'form'} style={{ fontSize: 16 }} />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.scrollToTop} onPress={() => this.scrollToTop()}>
+          <Feather name='chevrons-up' style={{ color: white, fontSize: 20 }} />
+        </TouchableOpacity>
+      </Fab>
+    )
+  }
+
+  //dipanggil untuk ngescroll keatas
   scrollToTop(): void {
     this.myRef.current.scrollTo({ x: 0, y: 0, animated: true })
   }
 
+  //fungsi utama render
   renderData(): Object {
     const { listAllCases, listAllCountriesCases, listCountriesCases, loadingAllCases, loadingAllCountriesCases, loadingCountriesCases } = this.props.covid
     const { refreshing, pinnedCountry, searchText, filteredListItem } = this.state
@@ -310,9 +356,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
           <ScrollView
             ref={this.myRef}
             refreshControl={<RefreshControl onRefresh={() => this.onRefresh()} refreshing={refreshing} />}>
-            <Text style={styles.textHero}>
-              Global Coronavirus Pandemic Cases
-            </Text>
+            <Text style={styles.textHero}>Perkembangan virus COVID-19 tingkat global</Text>
             {this.renderListGlobal(listAllCases)}
             {!loadingCountriesCases && listCountriesCases && pinnedCountry !== '' ? (
               this.renderListPinned(listCountriesCases)
@@ -321,11 +365,7 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
               this.renderListCountry(filterListItem)
             ) : this.renderLoading()}
           </ScrollView>
-          <SafeAreaView>
-            <TouchableOpacity style={styles.scrollToTop} onPress={() => this.scrollToTop()}>
-              <Feather name='chevrons-up' style={{ color: white, fontSize: 28 }} />
-            </TouchableOpacity>
-          </SafeAreaView>
+          {this.renderFloatingButton()}
         </>
       )
     }
@@ -334,9 +374,13 @@ class AllScreen extends React.Component<AllScreenProps, AllScreenState> {
     }
   }
 
+  //fungsi paling utama render
   render(): Object {
     const { info }: any = this.props
 
+    // console.log(this.props.covid.listAllCases)
+
+    //pengecekkan kalau tidak ada internet
     if (!info.status) return <NoInternet onPress={() => this.onRefresh()} />
     else return (
       <>
@@ -393,6 +437,12 @@ const styles = StyleSheet.create({
     fontSize: 20,
     padding: 16,
   },
+  textHeroOrange: {
+    color: primary,
+    fontFamily: 'Poppins-Bold',
+    fontSize: 20,
+    padding: 16,
+  },
   textInput: {
     color: black,
     fontFamily: 'Poppins-Medium',
@@ -405,20 +455,29 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   scrollToTop: {
-    backgroundColor: black,
-    bottom: 16,
+    backgroundColor: blackSecondary,
     padding: 8,
-    borderRadius: 32,
-    position: 'absolute',
-    right: 16,
+    borderRadius: 32
+  },
+  indonesiaFlag: {
+    backgroundColor: primary,
+    padding: 8,
+    borderRadius: 32
+  },
+  checkupPage: {
+    backgroundColor: black,
+    padding: 8,
+    borderRadius: 32
   }
 })
 
+//untuk mengambil reducer dari store.tsx
 const mapStateToProps = (state: any) => ({
   covid: state.covid,
   info: state.info,
 })
 
+//untuk nembak action
 const mapDispatchToProps = (dispatch) => {
   return {
     setConnection: bindActionCreators(setConnection, dispatch),
@@ -428,4 +487,5 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
+//ngejalanin 1 halaman ini
 export default connect(mapStateToProps, mapDispatchToProps)(AllScreen)
