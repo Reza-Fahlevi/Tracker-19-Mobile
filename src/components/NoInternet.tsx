@@ -10,7 +10,7 @@ const NoInternet = (props) => {
   return (
     <SafeAreaView style={styles.container}>
       <Image source={require('../assets/noInternetConnection.png')} />
-      <Text style={styles.headerText}>Lost Connection?</Text>
+      <Text style={styles.headerText}>Are you Lost Connection ?</Text>
       <Text style={styles.descriptionText}>Looks like we couldn’t find what you’re looking for please check your connection, and then try again</Text>
       <TouchableOpacity onPress={onPress}>
         <Text style={styles.buttonText}>Try Again</Text>
